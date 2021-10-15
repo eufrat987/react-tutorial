@@ -5,7 +5,13 @@ import React, { useEffect, useRef } from 'react';
 // target DOM nodes/elements
 
 const UseRefBasics = () => {
-  return <h2>useRef</h2>;
+  const refContainer = useRef(null)
+
+  useEffect(() => {
+    console.log(refContainer.current)
+  })
+
+  return <h2 ref = {refContainer}>useRef</h2>;
 };
 
 export default UseRefBasics;
