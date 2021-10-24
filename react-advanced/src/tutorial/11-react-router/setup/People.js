@@ -9,7 +9,9 @@ const People = () => {
       {people.map((person) => {
         return (
           <div key={person.id} className='item'>
-            <h4>{person.name}</h4>
+            <h4>{person.name} {person.id}</h4>
+
+            <Link to={'/People/' + person.id} > details </Link>
           </div>
         );
       })}
